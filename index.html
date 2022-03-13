@@ -8,7 +8,13 @@
 <body style="background-color:powderblue;">
     <div id="TextDiv">TEXT GOES HERE</div>
     <h1>Hello :) I am from GitHub</h1>
-    <button onclick="writeToLocalStorage()">localStorage.setItem('myCat', 'Tom');</button><br><br>
+    <p>Select a new cat from the list:</p>
+    <select id="mySelect" onchange="writeToLocalStorage()">
+        <option value="Tom">Tom</option>
+        <option value="Milo">Milo</option>
+        <option value="Charlie">Charlie</option>
+        <option value="Fabian">Fabian</option>
+    </select><br><br>
     <a href="index.html" download="downloadtest.html">Download File</a><br><br>
     <input type="file" name="inputfile" id="inputfile">
     <br>
@@ -16,7 +22,8 @@
 
     <script type="text/javascript">
         function writeToLocalStorage() {
-            localStorage.setItem('myCat', 'Tom');
+            var x = document.getElementById("mySelect").value;
+            localStorage.setItem('myCat', x);
             console.log("localStorage.getItem('myCat') = " + localStorage.getItem('myCat'));
         }
     </script>
