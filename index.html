@@ -2,13 +2,16 @@
 <html>
 
 <head>
-    <title>Document</title>
+    <title>ElectronWebView</title>
 </head>
 
-<body style="background-color:powderblue;">
+<body>
     <div id="TextDiv">TEXT GOES HERE</div>
-    <h1>Hello :) I am from GitHub main branch</h1>
-    <p>Select a new cat from the list:</p>
+    <h1>Hello :-)</h1>
+    <p>This is the default index.html loaded from:</p>
+    <p>https://github.com/aronsommer/electron-webview-content.git</p>
+    <p>main branch</p>
+    <!-- <p>Select a new cat from the list:</p>
     <select id="mySelect" onchange="writeToLocalStorage()">
         <option value="Tom">Tom</option>
         <option value="Milo">Milo</option>
@@ -18,7 +21,7 @@
     <a href="index.html" download="downloadtest.html">Download File</a><br><br>
     <input type="file" name="inputfile" id="inputfile">
     <br>
-    <pre id="output"></pre>
+    <pre id="output"></pre> -->
 
     <script type="text/javascript">
         function writeToLocalStorage() {
@@ -47,18 +50,18 @@
         var uriHost = "";
         if (window.location.protocol === "file:") {
             console.log("Running as local file!");
-            document.getElementById("TextDiv").innerHTML = "Running as local file!";
+            document.getElementById("TextDiv").innerHTML = "Caddy server is not running";
             // like: file://<path>/index.html
             uriHost = "http://<my-host-or-ip>:<my-port>";
         } else if (
             !window.location.host.replace(/(localhost|127\.0\.0\.1)(:\d+)?/i, "")
         ) {
             console.log("Running on local server (ssh tunnel etc.)");
-            document.getElementById("TextDiv").innerHTML = "Running on local server";
+            document.getElementById("TextDiv").innerHTML = "Caddy server is running";
             // like: "http://127.0.0.1:<my-port>"
         } else {
             console.log("Running normally, via web server");
-            document.getElementById("TextDiv").innerHTML = "Running normally, via web server";
+            document.getElementById("TextDiv").innerHTML = "Running via web server";
             // like: "http://<my-host-or-ip>:<my-port>"
         }
 // now do something with uriHost, e.g. for ajax uris etc.
