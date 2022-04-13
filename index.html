@@ -20,47 +20,14 @@
 </head>
 
 <body>
-    <div id="TextDiv">TEXT GOES HERE</div>
-    <h1 style="font-weight: lighter;">Hello :-)</h1>
-    <p>This is the default index.html loaded from:</p>
-    <p>https://github.com/falue/eddy-g-content.git main branch</p>
+    <h1 style="font-weight: lighter;">Eddy-G sample content</h1>
+    <p>To change this content, got to <i>File</i> &rarr; <i>Set git repository URL...</i> or load a local file.</p>
+    <p>&nbsp;</p>
+    <p>This is the default index.html loaded from:<br>
+    https://github.com/falue/eddy-g-content.git @ <b>main</b></p>
     <p>We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.</p>
-    <!-- <p>Select a new cat from the list:</p>
-    <select id="mySelect" onchange="writeToLocalStorage()">
-        <option value="Tom">Tom</option>
-        <option value="Milo">Milo</option>
-        <option value="Charlie">Charlie</option>
-        <option value="Fabian">Fabian</option>
-    </select><br><br>
-    <a href="index.html" download="downloadtest.html">Download File</a><br><br>
-    <input type="file" name="inputfile" id="inputfile">
-    <br>
-    <pre id="output"></pre> -->
-
-    <script type="text/javascript">
-        function writeToLocalStorage() {
-            var x = document.getElementById("mySelect").value;
-            localStorage.setItem('myCat', x);
-            console.log("localStorage.getItem('myCat') = " + localStorage.getItem('myCat'));
-        }
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById('inputfile')
-            .addEventListener('change', function () {
-
-                var fr = new FileReader();
-                fr.onload = function () {
-                    document.getElementById('output')
-                        .textContent = fr.result;
-                }
-
-                fr.readAsText(this.files[0]);
-                console.log(this.files);
-            })
-    </script>
+    and Electron <span id="electron-version">X</span>.</p>
 
     <script>
         var uriHost = "";
